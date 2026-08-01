@@ -12,6 +12,7 @@
     --accent-color: #eab308;    /* Yellow */
     --accent-hover: #ca8a04;
     --shadow-color: rgba(0, 0, 0, 0.5);
+    --cursor-color: #a855f7;    /* Vibrant Violet Custom Cursor */
     
     /* Animated Gradient Background - custom Violet, Turquoise, Yellow nodes */
     --color-bg1: rgb(32, 6, 68);
@@ -37,6 +38,7 @@ body.light-mode {
     --accent-color: #ca8a04;    /* Amber/Yellow */
     --accent-hover: #a16207;
     --shadow-color: rgba(124, 58, 237, 0.08);
+    --cursor-color: #7c3aed;    /* Deep Violet Custom Cursor */
     
     /* Animated Gradient Background (Lighter) */
     --color-bg1: rgb(240, 236, 245);
@@ -76,6 +78,62 @@ body {
     font-size: 1.6rem;
     line-height: 1.6;
     overflow-x: hidden;
+}
+
+/* ==========================================================================
+   CUSTOM CURSOR (DOT & DYNAMIC RING)
+   ========================================================================== */
+@media (min-width: 992px) {
+    body, a, button, select, input, textarea, [role="button"], .portfolio-buttons span, .project-card, .slides, .view-details-btn {
+        cursor: none !important;
+    }
+}
+
+.cursor-dot,
+.cursor-ring {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 999999;
+    border-radius: 50%;
+    will-change: transform;
+    transform: translate3d(-100px, -100px, 0);
+}
+
+.cursor-dot {
+    width: 8px;
+    height: 8px;
+    background: var(--cursor-color);
+    box-shadow: 0 0 10px rgba(168, 85, 247, 0.4);
+    margin: -4px 0 0 -4px;
+}
+
+.cursor-ring {
+    width: 34px;
+    height: 34px;
+    margin: -17px 0 0 -17px;
+    border: 1.5px solid rgba(168, 85, 247, 0.45);
+    transition: width 0.3s cubic-bezier(.16, 1, .3, 1), 
+                height 0.3s cubic-bezier(.16, 1, .3, 1), 
+                margin 0.3s cubic-bezier(.16, 1, .3, 1), 
+                border-color 0.3s cubic-bezier(.16, 1, .3, 1),
+                background-color 0.3s cubic-bezier(.16, 1, .3, 1);
+}
+
+.cursor-ring--active {
+    width: 50px;
+    height: 50px;
+    margin: -25px 0 0 -25px;
+    border-color: var(--cursor-color);
+    background-color: rgba(168, 85, 247, 0.08);
+}
+
+@media (max-width: 991px) {
+    .cursor-dot,
+    .cursor-ring {
+        display: none !important;
+    }
 }
 
 section {

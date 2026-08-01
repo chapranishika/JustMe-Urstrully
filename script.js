@@ -204,4 +204,59 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initialize Grid on load
     renderProjects();
+
+    // Custom Cursor tracking
+    const cursorDot = document.querySelector('.cursor-dot');
+    const cursorRing = document.querySelector('.cursor-ring');
+    let mouseX = -100;
+    let mouseY = -100;
+    let ringX = -100;
+    let ringY = -100;
+
+    window.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+        if (cursorDot) {
+            cursorDot.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`;
+        }
+    });
+
+    function updateRing() {
+        if (ringX === -100 && mouseX !== -100) {
+            ringX = mouseX;
+            ringY = mouseY;
+        } else {
+            ringX += (mouseX - ringX) * 0.15;
+            ringY += (mouseY - ringY) * 0.15;
+        }
+        
+        if (cursorRing) {
+            cursorRing.style.transform = `translate3d(${ringX}px, ${ringY}px, 0)`;
+        }
+        requestAnimationFrame(updateRing);
+    }
+    updateRing();
+
+    // Event delegation for expanding cursor ring on hover
+    document.addEventListener('mouseover', (e) => {
+        const target = e.target;
+        if (
+            target.closest('a') || 
+            target.closest('button') || 
+            target.closest('.clickable') || 
+            target.closest('.slides') || 
+            target.closest('.portfolio-prev') || 
+            target.closest('.portfolio-next') ||
+            target.closest('.project-card') ||
+            target.closest('.filter-btn')
+        ) {
+            if (cursorRing) {
+                cursorRing.classList.add('cursor-ring--active');
+            }
+        } else {
+            if (cursorRing) {
+                cursorRing.classList.remove('cursor-ring--active');
+            }
+        }
+    });
 });
