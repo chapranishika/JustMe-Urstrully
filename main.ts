@@ -1,4 +1,6 @@
 import './styles.css'
+import './projects.js'
+import './script.js'
 
 
 
