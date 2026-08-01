@@ -1433,6 +1433,370 @@ svg {
 }
 
 /* ==========================================================================
+   SCROLLING TICKER
+   ========================================================================== */
+.ticker-wrap {
+    background: rgba(6, 182, 212, 0.06);
+    border-bottom: 1px solid rgba(6, 182, 212, 0.12);
+    overflow: hidden;
+    padding: 1.4rem 0;
+    position: fixed;
+    top: 8rem;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+}
+
+.ticker {
+    display: flex;
+    white-space: nowrap;
+    animation: ticker-scroll 32s linear infinite;
+}
+
+.ticker span {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.15rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--text-color);
+    padding: 0 3rem;
+    display: inline-flex;
+    align-items: center;
+}
+
+.ticker span em {
+    color: var(--accent-color);
+    font-style: normal;
+    margin-right: 1.5rem;
+}
+
+@keyframes ticker-scroll {
+    0% { transform: translate3d(0, 0, 0); }
+    100% { transform: translate3d(-50%, 0, 0); }
+}
+
+/* Adjust home top margin due to ticker height */
+.home {
+    margin-top: 5rem;
+}
+
+/* ==========================================================================
+   HERO METRICS
+   ========================================================================== */
+.hero-metrics {
+    display: flex;
+    gap: 4.5rem;
+    margin-top: 3.5rem;
+}
+
+.metric-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.metric-value {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.8rem;
+    font-weight: 800;
+    color: var(--sec-text-color);
+    line-height: 1;
+}
+
+.metric-label {
+    font-size: 1rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--text-color);
+    opacity: 0.6;
+    margin-top: 0.6rem;
+}
+
+/* ==========================================================================
+   ABOUT ADDITIONS (QUOTES & HOBBY CHIPS)
+   ========================================================================== */
+.about-quote {
+    margin: 3rem 0;
+    padding: 2.2rem 2.5rem;
+    border-left: 3px solid var(--accent-color);
+    background: rgba(255, 255, 255, 0.015);
+    border-radius: 0 12px 12px 0;
+}
+
+.about-quote p {
+    font-size: 1.45rem;
+    line-height: 1.65;
+    color: var(--text-color);
+    font-style: italic;
+    opacity: 0.85;
+    margin-bottom: 1.2rem;
+}
+
+.about-quote p:last-child {
+    margin-bottom: 0;
+}
+
+.hobbies-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 3.5rem;
+}
+
+.hobby-chip {
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 0.6rem 1.4rem;
+    border-radius: 20px;
+    background: rgba(168, 85, 247, 0.06);
+    border: 1px solid rgba(168, 85, 247, 0.15);
+    color: var(--heading-color);
+    transition: all 0.3s ease;
+}
+
+.hobby-chip:hover {
+    background: rgba(168, 85, 247, 0.12);
+    border-color: rgba(168, 85, 247, 0.3);
+    transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   CURRENTLY BUILDING SECTION
+   ========================================================================== */
+.building {
+    background: var(--bg-color);
+    position: relative;
+}
+
+.building-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 3.5rem;
+    width: 100%;
+    max-width: 1000px;
+    margin: 4rem auto 0;
+    z-index: 20;
+    position: relative;
+}
+
+.build-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    backdrop-filter: blur(16px);
+    border-radius: 20px;
+    padding: 3.5rem;
+    box-shadow: 0 15px 35px var(--shadow-color);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.build-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--sec-text-color);
+}
+
+.build-status {
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--sec-text-color);
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+}
+
+.build-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.3rem;
+    color: var(--heading-color);
+    margin-bottom: 1.2rem;
+}
+
+.build-card p {
+    font-size: 1.45rem;
+    color: var(--text-color);
+    line-height: 1.7;
+    opacity: 0.85;
+}
+
+.progress-bar-container {
+    margin-top: 2.5rem;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--sec-text-color), var(--accent-color));
+    border-radius: 2px;
+}
+
+/* ==========================================================================
+   VIBES (PLAYLIST) SECTION
+   ========================================================================== */
+.vibes {
+    position: relative;
+    background: var(--bg-color);
+}
+
+.vibes-player {
+    display: flex;
+    align-items: center;
+    gap: 3.5rem;
+    background: rgba(0, 0, 0, 0.25);
+    border: 1px solid var(--card-border);
+    border-radius: 20px;
+    padding: 2.8rem 4rem;
+    width: 100%;
+    max-width: 800px;
+    margin: 4rem auto 4.5rem;
+    box-shadow: 0 15px 35px var(--shadow-color);
+    z-index: 20;
+    position: relative;
+}
+
+.vinyl-record {
+    width: 6.5rem;
+    height: 6.5rem;
+    border-radius: 50%;
+    background: conic-gradient(#1e154a 0deg, #0b031f 90deg, #1e154a 180deg, #0b031f 270deg);
+    flex-shrink: 0;
+    position: relative;
+    animation: spin-vinyl 8s linear infinite;
+    box-shadow: 0 0 20px rgba(168, 85, 247, 0.35);
+}
+
+.vinyl-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background: var(--bg-color);
+}
+
+@keyframes spin-vinyl {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.player-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.player-info .now-playing {
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--sec-text-color);
+    font-weight: 700;
+    margin-bottom: 0.6rem;
+}
+
+.player-info .track-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.3rem;
+    color: var(--heading-color);
+    font-weight: 700;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.player-info .artist-name {
+    font-size: 1.35rem;
+    color: var(--text-color);
+    opacity: 0.75;
+    margin-top: 0.3rem;
+}
+
+.visualizer {
+    display: flex;
+    align-items: flex-end;
+    gap: 4px;
+    height: 3rem;
+}
+
+.visualizer-bar {
+    width: 4px;
+    background: var(--accent-color);
+    border-radius: 2px;
+    animation: eq-pulse 1.2s ease-in-out infinite alternate;
+}
+
+.visualizer-bar:nth-child(1) { height: 1.5rem; animation-delay: 0.1s; }
+.visualizer-bar:nth-child(2) { height: 2.5rem; animation-delay: 0.4s; }
+.visualizer-bar:nth-child(3) { height: 1.8rem; animation-delay: 0.2s; }
+.visualizer-bar:nth-child(4) { height: 2.8rem; animation-delay: 0.6s; }
+.visualizer-bar:nth-child(5) { height: 2.0rem; animation-delay: 0.3s; }
+
+@keyframes eq-pulse {
+    0% { transform: scaleY(0.3); }
+    100% { transform: scaleY(1); }
+}
+
+.songs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    z-index: 20;
+    position: relative;
+}
+
+.song-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 16px;
+    padding: 2.2rem;
+    box-shadow: 0 8px 20px var(--shadow-color);
+    transition: all 0.3s ease;
+}
+
+.song-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--sec-text-color);
+    box-shadow: 0 12px 25px rgba(6, 182, 212, 0.15);
+}
+
+.song-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--sec-text-color);
+    line-height: 1;
+    margin-bottom: 1.2rem;
+    opacity: 0.8;
+}
+
+.song-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--heading-color);
+    margin-bottom: 0.4rem;
+}
+
+.song-artist {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    opacity: 0.7;
+}
+
+.song-tag {
+    display: inline-block;
+    font-size: 1rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--accent-color);
+    margin-top: 1.4rem;
+    font-weight: 700;
+}
+
+/* ==========================================================================
    RESPONSIVE DESIGN (MEDIA QUERIES)
    ========================================================================== */
 @media (max-width: 1200px) {
