@@ -205,51 +205,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize Grid on load
     renderProjects();
 
-    // Vibes Music Player Simulation
-    const trackList = [
-        { title: "Jaane Kyun", artist: "Vishal Dadlani" },
-        { title: "Offo", artist: "Aditi Singh Sharma" },
-        { title: "Manali Trance", artist: "Yo Yo Honey Singh" },
-        { title: "Shiv Strotam", artist: "Shankar Mahadevan" },
-        { title: "Dope Shope", artist: "Yo Yo Honey Singh" },
-        { title: "Sheesha", artist: "King" },
-        { title: "Centuries", artist: "Fall Out Boy" },
-        { title: "Old Money", artist: "AP Dhillon" }
-    ];
-    let currentTrackIdx = 0;
-    const trackNameEl = document.querySelector('.vibes-player .track-name');
-    const artistNameEl = document.querySelector('.vibes-player .artist-name');
-    const visualizerBars = document.querySelectorAll('.vibes-player .visualizer-bar');
 
-    if (trackNameEl && artistNameEl) {
-        trackNameEl.style.transition = 'opacity 0.3s ease';
-        artistNameEl.style.transition = 'opacity 0.3s ease';
-    }
-
-    // Cycle track every 8 seconds
-    setInterval(() => {
-        currentTrackIdx = (currentTrackIdx + 1) % trackList.length;
-        if (trackNameEl && artistNameEl) {
-            trackNameEl.style.opacity = 0;
-            artistNameEl.style.opacity = 0;
-            setTimeout(() => {
-                trackNameEl.textContent = trackList[currentTrackIdx].title;
-                artistNameEl.textContent = trackList[currentTrackIdx].artist;
-                trackNameEl.style.opacity = 1;
-                artistNameEl.style.opacity = 1;
-            }, 300);
-        }
-    }, 8000);
-
-    // Randomize visualizer heights every 120ms
-    if (visualizerBars.length > 0) {
-        setInterval(() => {
-            visualizerBars.forEach(bar => {
-                const randomHeight = Math.random() * 2.2 + 0.8;
-                bar.style.transform = `scaleY(${randomHeight})`;
-            });
-        }, 120);
-    }
 
     // Custom Cursor tracking
     const cursorDot = document.querySelector('.cursor-dot');
