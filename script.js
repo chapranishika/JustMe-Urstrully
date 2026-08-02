@@ -1,5 +1,5 @@
 // Wait for DOM to load
-document.addEventListener('DOMContentLoaded', () => {
+function initPortfolio() {
     // Header Scrollspy Navigation Active States
     const navLinks = document.querySelectorAll('header nav a');
     const sections = document.querySelectorAll('section');
@@ -261,4 +261,10 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     });
-});
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initPortfolio);
+} else {
+    initPortfolio();
+}

@@ -2,7 +2,7 @@ import './styles.css'
 import './projects.js'
 import './script.js'
 
-document.addEventListener('DOMContentLoaded', () => {
+function initInteractiveBg() {
     const interBubble = document.querySelector('.interactive');
     if (!interBubble) return;
     let curX = 0;
@@ -25,4 +25,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     move();
-});
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initInteractiveBg);
+} else {
+    initInteractiveBg();
+}
