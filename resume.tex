@@ -1,0 +1,138 @@
+\documentclass[9pt]{article}
+\usepackage[top=0.35in, bottom=0.32in, left=0.45in, right=0.45in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{array}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+\titleformat{\section}{\bfseries\small\uppercase}{}{0em}{}
+  [\vspace{-5pt}\rule{\linewidth}{0.4pt}]
+\titlespacing*{\section}{0pt}{4pt}{2pt}
+
+\setlist[itemize]{
+  noitemsep, topsep=0pt, parsep=0pt, partopsep=0pt,
+  leftmargin=1em, label=\textbullet
+}
+
+\newcommand{\ghlink}[1]{\,[\href{#1}{\footnotesize GitHub $\nearrow$}]}
+\newcommand{\ghspace}{\,[\footnotesize GitHub: \textit{coming soon}]}
+\newcommand{\drivelink}[2]{\href{#1}{#2}}
+
+\begin{document}
+
+% ── HEADER ────────────────────────────────────────────────────────────────────
+\begin{center}
+  {\large\bfseries NISHIKA CHAPRA}\\[2pt]
+  \small
+  \href{mailto:chapranishika@gmail.com}{chapranishika@gmail.com}\;$|$\;
+  \href{https://github.com/chapranishika}{github.com/chapranishika}\;$|$\;
+  \href{https://linkedin.com/in/nc002}{linkedin.com/in/nc002}\;$|$\;
+  +91\,8369314670 | Mumbai, Maharashtra 
+\end{center}
+
+% ── SUMMARY ───────────────────────────────────────────────────────────────────
+\small
+3rd-year B.Tech IT (KJSSE, CGPA\,9.3) and IITM B.Sc.\ Data Science dual-degree candidate with a \textbf{peer-reviewed publication at ICCET 2026}. AI Engineer focus: recommendation systems, fraud/risk ML, and GenAI --- from feature engineering to Dockerised FastAPI deployment.
+\normalsize
+
+% ── EDUCATION ─────────────────────────────────────────────────────────────────
+\section{Education}
+
+\textbf{KJ Somaiya School of Engineering (KJSSE)} \hfill 2023\,--\,Present\\[-1pt]
+{\small B.Tech in Information Technology \hfill \textbf{CGPA: 9.3\,/\,10}}
+
+\textbf{Indian Institute of Technology Madras (IITM) --- Online} \hfill 2023\,--\,Present\\[-1pt]
+{\small B.Sc.\ in Data Science \& Programming --- \textit{Diploma in Data Science (Completed Sep\,2026)}, \textit{Diploma in Programming (Expected Dec\,2026)}}
+
+% ── PUBLICATION ───────────────────────────────────────────────────────────────
+\section{Publication}
+
+\textbf{\drivelink{https://drive.google.com/file/d/13DOjauPinLhMkZyL5ACZXexEDvVOXVWE/view?usp=sharing}{%
+ML-Based Classification of Alcohol Consumption Patterns with Chatbot-Assisted Intervention}}\\[-1pt]
+{\small \textit{ICCET 2026} --- OSIET $\times$ Samarkand State University, Uzbekistan \hfill Mar\,2026}
+
+% ── SKILLS ────────────────────────────────────────────────────────────────────
+\section{Skills}
+
+\small
+\begin{tabular}{@{}p{2.1cm}@{\hspace{4pt}}p{14.9cm}@{}}
+\textbf{Languages}    & Python, Java, C, C++ \\[0.3pt]
+\textbf{ML\,/\,DS}    & Scikit-learn, XGBoost, LightGBM, SHAP, FAISS, ADASYN, SMOTE, Pandas, NumPy,
+                        Feature Engineering, Model Evaluation, PyTorch\,/\,TensorFlow \\[0.3pt]
+\textbf{GenAI}        & Gemini API, RAG, Prompt Engineering, SSE Streaming, AssemblyAI \\[0.3pt]
+\textbf{Web \& Tools} & React.js, Node.js, FastAPI, Flask, Docker, MySQL, PostgreSQL, Git, Vercel \\
+\end{tabular}
+\normalsize
+
+% ── EXPERIENCE ────────────────────────────────────────────────────────────────
+\section{Experience}
+
+\textbf{Frontend Developer Intern ---}
+\drivelink{https://drive.google.com/file/d/1PFmdKGRp1GaHa-cI4ItGWv-dvhBolYI7/view?usp=sharing}{WOLFx Digital Agency
+[\footnotesize Certificate $\nearrow$]}
+\hfill{\small Dec\,2024\,--\,Feb\,2025}
+\begin{itemize}[topsep=1pt]
+  \item Shipped two concurrent live client products (e-commerce \& EV charging) --- translated stakeholder briefs into cross-browser React interfaces, deployed to Vercel under production deadlines.
+\end{itemize}
+
+\textbf{Summer Trainee --- Crisis \& Resilience (ESG \& Risk Consulting), Grant Thornton Bharat LLP} \hfill{\small Jul\,2026\,--\,Sep\,2026}
+\begin{itemize}[topsep=1pt]
+  \item Supported cyber risk assessments, IT control evaluation, and client documentation across enterprise risk management engagements.
+\end{itemize}
+
+% ── PROJECTS ──────────────────────────────────────────────────────────────────
+\section{Projects}
+
+\textbf{Vibezz --- AI Fashion Platform (Myntra-style: Recs, Trends \& Style)}%
+\ghlink{https://github.com/chapranishika/Vibezz-Fashionmind}
+\hfill{\small\textit{ALS, BPR, LightGBM, FAISS, Gemini RAG}}
+\begin{itemize}[topsep=1pt]
+  \item Built a multi-stage recommendation engine on an 8M-transaction H\&M dataset (ALS + BPR collaborative filtering $\to$ LightGBM LambdaRank re-ranker), achieving a \textbf{7.5$\times$ lift in Recall@10} over the popularity baseline.
+  \item Built a real-time visual/text style search using FAISS IVFFlat over 105k product embeddings ($<$5ms retrieval), plus a LightGBM demand-forecasting model for trending items (8.8\% MAPE).
+  \item Developed a Gemini 2.0 RAG-powered AI Stylist chatbot with live function-calling for personalized outfit and trend explanations.
+\end{itemize}
+
+\textbf{FraudGuard --- Credit Card Fraud Detection Pipeline}%
+\ghlink{https://github.com/chapranishika/Fraudguard}
+\hfill{\small\textit{XGBoost, SHAP, FastAPI, Docker}}
+\begin{itemize}[topsep=1pt]
+  \item Achieved \textbf{ROC-AUC\,0.99, Precision\,0.95, F1\,0.91} on 284,807 transactions with 0.17\% fraud rate.
+  \item Applied ADASYN oversampling \emph{inside} the training split to prevent validation leakage.
+  \item Served auditable per-prediction SHAP TreeExplainer attributions via a Dockerised FastAPI endpoint.
+\end{itemize}
+
+\textbf{PaySense --- UPI Fraud Detection (Android + ML)}%
+\ghlink{https://github.com/chapranishika/PaySense-UPIFraud-Detection}
+\hfill{\small\textit{XGBoost, FastAPI, Android, SHAP}}
+\begin{itemize}[topsep=1pt]
+  \item Attained \textbf{ROC-AUC\,0.8851, 100\% Precision} @ t\,=\,0.50 via a three-layer defence: SMS gate $\to$ on-device HITL cache $\to$ XGBoost/FastAPI inference.
+  \item Identified contamination across 3 widely-cited public datasets and rejected a pre-balanced file that would have inflated metrics.
+  \item Used SHAP to isolate \texttt{new\_device\_flag} as the dominant fraud signal, with rolling z-scores to eliminate target leakage.
+\end{itemize}
+
+\textbf{RelapseGuard --- AI Recovery PWA}%
+\ghlink{https://github.com/chapranishika/relapseguard-recovery-ai}
+\hfill{\small\textit{Python, FastAPI, React, Gemini}}
+\begin{itemize}[topsep=1pt]
+  \item Achieved \textbf{95.8\% holdout accuracy}, F1\,0.971 on 4-class addiction-recovery classification, outperforming 8 benchmarked classifiers.
+  \item Built a Gemini 1.5 Flash SSE chatbot with a regex crisis interceptor that hard-overrides to the 988 Lifeline.
+  \item Fused ML probabilities with real-time urge, stress, and temporal signals into a composite risk score, secured with bcrypt and httpOnly JWT.
+\end{itemize}
+
+% ── ACHIEVEMENTS ─────────────────────────────────────────────────────────────
+\section{Achievements \& Certifications}
+
+\begin{itemize}[topsep=1pt]
+  \item \textbf{Marketing Head}, BloomBox Entrepreneurship Cell, KJSSE \hfill 2025\,--\,Present
+  \item \drivelink{https://drive.google.com/file/d/1Ny9y4ChDDEAulTF4YXvXGWswUJm64CIj/view?usp=sharing}{\textbf{IIT Madras --- Foundation in Data Science \& Programming}} (Certified)
+  \item \textbf{Competitive dancer} --- 10+ years, national-level, multiple wins
+\end{itemize}
+
+\end{document}
