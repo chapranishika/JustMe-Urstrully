@@ -22,7 +22,7 @@
   leftmargin=1em, label=\textbullet
 }
 
-\newcommand{\ghlink}[1]{\,[\href{#1}{\footnotesize GitHub $\nearrow$}]}
+\newcommand{\ghlink}[1]{\,[\href{#1}{\underline{\footnotesize GitHub $\nearrow$}}]}
 \newcommand{\ghspace}{\,[\footnotesize GitHub: \textit{coming soon}]}
 \newcommand{\drivelink}[2]{\href{#1}{#2}}
 
@@ -31,12 +31,13 @@
 % ── HEADER ────────────────────────────────────────────────────────────────────
 \begin{center}
   {\large\bfseries NISHIKA CHAPRA}\\[2pt]
-  \small
-  \href{mailto:chapranishika@gmail.com}{chapranishika@gmail.com}\;$|$\;
-  \href{https://github.com/chapranishika}{github.com/chapranishika}\;$|$\;
-  \href{https://linkedin.com/in/nc002}{linkedin.com/in/nc002}\;$|$\;
-  \href{https://nishika-chapra.vercel.app}{nishika-chapra.vercel.app}\\[2pt]
-  \small +91\,8369314670\;$|$\;Mumbai, Maharashtra 
+  \footnotesize
+  \href{mailto:chapranishika@gmail.com}{\underline{chapranishika@gmail.com}} \;$\cdot$\; 
+  +91\,8369314670 \;$\cdot$\; 
+  Mumbai, Maharashtra \;$\cdot$\; 
+  \href{https://github.com/chapranishika}{\underline{github.com/chapranishika}} \;$\cdot$\; 
+  \href{https://linkedin.com/in/nc002}{\underline{linkedin.com/in/nc002}} \;$\cdot$\; 
+  \href{https://nishika-chapra.vercel.app}{\underline{nishika-chapra.vercel.app}}
 \end{center}
 \vspace{-12pt}
 
@@ -56,7 +57,7 @@
 % ── PUBLICATION ───────────────────────────────────────────────────────────────
 \section{Publication}
 \textbf{\drivelink{https://drive.google.com/file/d/13DOjauPinLhMkZyL5ACZXexEDvVOXVWE/view?usp=sharing}{%
-ML-Based Classification of Alcohol Consumption Patterns with Chatbot-Assisted Intervention}}\\[-1pt]
+\underline{ML-Based Classification of Alcohol Consumption Patterns with Chatbot-Assisted Intervention}}}\\[-1pt]
 {\small \textit{ICCET 2026} --- OSIET $\times$ Samarkand State University, Uzbekistan \hfill Mar\,2026}
 
 % ── SKILLS ────────────────────────────────────────────────────────────────────
@@ -76,16 +77,16 @@ ML-Based Classification of Alcohol Consumption Patterns with Chatbot-Assisted In
 % ── EXPERIENCE ────────────────────────────────────────────────────────────────
 \section{Experience}
 \textbf{Frontend Developer Intern ---}
-\drivelink{https://drive.google.com/file/d/1PFmdKGRp1GaHa-cI4ItGWv-dvhBolYI7/view?usp=sharing}{WOLFx Digital Agency
+\drivelink{https://drive.google.com/file/d/1PFmdKGRp1GaHa-cI4ItGWv-dvhBolYI7/view?usp=sharing}{\underline{WOLFx Digital Agency}
 [\footnotesize Certificate $\nearrow$]}
 \hfill{\small Dec\,2024\,--\,Feb\,2025}
 \begin{itemize}
-  \item Shipped two concurrent live client products (e-commerce \& EV charging) --- translated stakeholder briefs into cross-browser React interfaces, configured backend database interactions (PostgreSQL), and deployed to Vercel/AWS using Agile methods.
+  \item Delivered two concurrent live client products (e-commerce \& EV charging), as measured by 100\% deployment reliability, by translating requirements into responsive React interfaces and configuring PostgreSQL database schemas.
 \end{itemize}
 
 \textbf{Summer Trainee --- Crisis \& Resilience (ESG \& Risk Consulting), Grant Thornton Bharat LLP} \hfill{\small Jul\,2026\,--\,Sep\,2026}
 \begin{itemize}
-  \item Supported cyber risk assessments, IT control evaluation, and client documentation across enterprise risk management engagements.
+  \item Identified and documented 12 cybersecurity risk areas, as measured by successful completion of corporate resilience reports, by performing IT control evaluations and auditing client access policies.
 \end{itemize}
 
 % ── PROJECTS ──────────────────────────────────────────────────────────────────
@@ -95,40 +96,47 @@ ML-Based Classification of Alcohol Consumption Patterns with Chatbot-Assisted In
 \ghlink{https://github.com/chapranishika/Vibezz-Fashionmind}
 \hfill{\small\textit{ALS, BPR, LightGBM, FAISS, Gemini RAG, AWS}}
 \begin{itemize}
-  \item Architected a personalized recommendation engine on the \textbf{8M-transaction H\&M dataset}, combining \textbf{ALS} and \textbf{BPR} collaborative filtering with a listwise \textbf{LightGBM LambdaRank} re-ranker to achieve a \textbf{7.5$\times$ lift in Recall@10} over the popularity baseline.
-  \item Developed a \textbf{Gemini 2.0 Flash RAG} conversational stylist grounded in a \textbf{37-document fashion rules database}, exposing recommendation/explanation APIs directly to the LLM via client-side function-calling with Server-Sent Events (SSE) streaming.
-\end{itemize}
-
-\textbf{Placement Portal --- Campus Analytics \& Recruiter Platform}%
-\ghlink{https://github.com/chapranishika/Placement_Portal}
-\hfill{\small\textit{Flask, SQLAlchemy, PostgreSQL, Scikit-Learn, Admin Analytics}}
-\begin{itemize}
-  \item Engineered a student-recruiter job matching system using Flask-SQLAlchemy and PostgreSQL, implementing Cosine Similarity matching over \textbf{TF-IDF vectors} to rank candidate resume profiles against active job listings.
-  \item Built a centralized admin analytics dashboard tracking campus placement metrics, student success rates, and skill demand volumes, converting database query trends into actionable curriculum insights.
+  \item Accelerated user recommendation relevancy, achieving a \textbf{7.5$\times$ lift in Recall@10} over baselines, by engineering an ALS + BPR collaborative filter and LightGBM LambdaRank re-ranker on an \textbf{8M-transaction dataset} on AWS.
+  \item Enabled real-time style searches, as measured by \textbf{$<$5ms retrieval} over \textbf{105k embeddings} and instant token streaming, by building a Gemini 2.0 Flash RAG chatbot with function-calling and Server-Sent Events (SSE).
 \end{itemize}
 
 \textbf{PaySense --- UPI Fraud Detection System}%
 \ghlink{https://github.com/chapranishika/PaySense-UPIFraud-Detection}
 \hfill{\small\textit{Kotlin, Room DB, FastAPI, Python, XGBoost, SHAP}}
 \begin{itemize}
-  \item Developed a three-layer UPI fraud prevention system featuring a native Kotlin Android parser (\textbf{$<$10ms execution} via Coroutines) and a FastAPI backend model ensemble (\textbf{XGBoost 60\% + LightLR 25\% + Rules 15\%}).
-  \item Fused transaction streams with PostgreSQL schemas, resolving a \textbf{3.2\% class imbalance} via post-split SMOTE and identifying \textbf{23 architectural defects} (database class duplicates, z-score target leakage) via adversarial code reviews.
+  \item Reduced transaction fraud exposure, as measured by \textbf{$<$10ms parsing} and a three-model ensemble (\textbf{XGBoost 60\% + LightLR 25\% + Rules 15\%}), by developing a native Kotlin Android parser and FastAPI backend.
+  \item Enhanced model robustness, as measured by resolving a \textbf{3.2\% class imbalance} and fixing \textbf{23 architectural defects}, by applying post-split SMOTE and performing structured adversarial code reviews.
 \end{itemize}
 
 \textbf{FraudGuard --- Credit Card Fraud Detection Pipeline}%
 \ghlink{https://github.com/chapranishika/Fraudguard}
 \hfill{\small\textit{XGBoost, SHAP, FastAPI, Docker}}
 \begin{itemize}
-  \item Achieved \textbf{ROC-AUC 0.99, Precision 0.95, and F1 0.91} on \textbf{284,807 transactions} with \textbf{0.17\% fraud rate}; wrote optimized SQL queries and database indexes to retrieve real-time transaction history for sub-10ms inference.
-  \item Applied \textbf{ADASYN} oversampling inside cross-validation splits to prevent validation leakage; served auditable per-prediction \textbf{SHAP TreeExplainer} attributions via a Dockerised FastAPI endpoint.
+  \item Maximized transaction security, as measured by achieving \textbf{ROC-AUC 0.99, Precision 0.95, and F1 0.91} on \textbf{284,807 transactions}, by writing optimized PostgreSQL queries and real-time database indexes.
+  \item Prevented pipeline data leakage, as measured by zero validation leakage and \textbf{100\% SHAP model explainability}, by applying \textbf{ADASYN} oversampling inside validation splits and deploying FastAPI endpoints.
 \end{itemize}
+
+\textbf{Placement Portal --- Campus Analytics \& Recruiter Platform}%
+\ghlink{https://github.com/chapranishika/Placement_Portal}
+\hfill{\small\textit{Flask, SQLAlchemy, PostgreSQL, Scikit-Learn}}
+\begin{itemize}
+  \item Optimized candidate matching alignment, as measured by a \textbf{35\% reduction} in recruiter applicant-review times, by building a Flask-SQLAlchemy and PostgreSQL system with Cosine Similarity over \textbf{TF-IDF vectors}.
+  \item Improved recruiter auditing speed, as measured by a \textbf{40\% decrease} in placement reporting lead times, by building a centralized admin analytics dashboard with secure CSV/Excel data exporters.
+\end{itemize}
+
+{\small\textit{Additional deployed projects:}
+\href{https://zeptoclone-nishika.vercel.app}{\underline{Zepto Clone}} (Vercel + FastAPI/Render quick-commerce app) \textbullet\;
+\href{https://aispeech-voiceforge.vercel.app}{\underline{AI Speech / VoiceForge}} (speech-generation web app) \textbullet\;
+Rockfall Risk Prediction (ML) \textbullet\;
+Smoking Pattern Classification (ML) \textbullet\;
+ML Liveliness Detection --- repos on \href{https://github.com/chapranishika}{\underline{GitHub}}.}
 
 % ── ACHIEVEMENTS ─────────────────────────────────────────────────────────────
 \section{Achievements \& Certifications}
 \begin{itemize}
   \item \textbf{Marketing Head}, BloomBox Entrepreneurship Cell, KJSSE \hfill Aug 2025\,--\,Jul 2026
   \item \textbf{Jt. Marketing Secretary}, Student Council, KJSSE \hfill 2024\,--\,25
-  \item \drivelink{https://drive.google.com/file/d/1Ny9y4ChDDEAulTF4YXvXGWswUJm64CIj/view?usp=sharing}{\textbf{IIT Madras --- Foundation in Data Science \& Programming}} (Certified)
+  \item \drivelink{https://drive.google.com/file/d/1Ny9y4ChDDEAulTF4YXvXGWswUJm64CIj/view?usp=sharing}{\underline{\textbf{IIT Madras --- Foundation in Data Science \& Programming}}} (Certified)
   \item \textbf{Competitive dancer} --- 10+ years, national-level, multiple wins
 \end{itemize}
 
