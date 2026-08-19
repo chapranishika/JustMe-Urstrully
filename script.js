@@ -140,11 +140,17 @@ function initPortfolio() {
         const githubBtn = project.github 
             ? `<a href="${project.github}" target="_blank" class="modal-github-btn btn"><i class='bx bxl-github'></i> View Code</a>` 
             : '';
+        const liveBtn = project.live 
+            ? `<a href="${project.live}" target="_blank" class="modal-github-btn btn"><i class='bx bx-link-external'></i> Live Demo</a>` 
+            : '';
 
         modalContent.innerHTML = `
             <div class="modal-header-row">
                 <span class="modal-project-category">${project.category.toUpperCase()}</span>
-                ${githubBtn}
+                <div style="display: flex; gap: 1rem;">
+                    ${liveBtn}
+                    ${githubBtn}
+                </div>
             </div>
             <h2>${project.title}</h2>
             <div class="modal-project-tech">${techBadges}</div>

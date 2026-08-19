@@ -160,6 +160,21 @@ const projectsData = [
     ],
     icon: "bx-closet",
     github: "https://github.com/chapranishika/Vibezz-Fashionmind"
+  },
+  {
+    id: "heavy-equipment",
+    title: "Heavy Equipment Price Prediction",
+    category: "ds",
+    tags: ["LightGBM", "CatBoost", "FastAPI", "Vercel", "Python"],
+    summary: "Placed in the top 50% globally (Rank #1610) out of 3,200+ teams in a Kaggle machine learning challenge, ensembling tuned LightGBM and CatBoost models. Deployed a dynamic dashboard on Vercel.",
+    bullets: [
+      "Placed in the top 50% globally (Rank #1610) out of 3,200+ teams in a machine learning challenge, achieving a competitive 0.198 RMSLE by designing and ensembling tuned LightGBM (80%) and CatBoost (20%) models on a dataset of 138K+ transaction records.",
+      "Eliminated category dimensionality bottlenecks and prevented target leakage across high-cardinality metadata (100+ classes), securing stable gradient convergence during K-fold validation by implementing a leakage-free 5-Fold Out-of-Fold (OOF) target encoding pipeline and engineering physical wear features (MachineAge, HoursPerYear).",
+      "Enhanced model interpretability and stakeholder alignment for non-technical users, rendering dynamic pricing breakdowns instantly by building and deploying an interactive dashboard on Vercel that replicates the ensembled log-space depreciation formulas and visualizes value-decay curves via real-time SVG charting."
+    ],
+    icon: "bx-trending-up",
+    github: "https://github.com/chapranishika/heavy-equipment-price-prediction",
+    live: "https://heavy-equipment-price-prediction-kaggle.vercel.app"
   }
 ];
 
